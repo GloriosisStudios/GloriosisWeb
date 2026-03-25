@@ -10,3 +10,14 @@ a{
     color: deepskyblue;
 }
 
+
+header {
+  display: flex;        /* align items in a row */
+  align-items: center;  /* vertically center logo + text */
+  padding: 10px 20px;   /* space around */
+}
+
+.logo {
+  height: 60px;         /* adjust size as needed */
+  margin-right: 15px;   /* space between logo and text */
+}
