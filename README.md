@@ -1,2 +1,2 @@
 # GloriosisWeb
-The website for Gloriosis Studios and other Gloriosis™ owned projects
+The website for Gloriosis™ owned projects
