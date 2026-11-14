@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -9,13 +10,45 @@ body {
     background: linear-gradient(
         -45deg,
         rgb(0, 0, 0),
-        rgb(12, 31, 68)
+        rgb(17, 25, 43)
     );
 
     background-attachment: fixed;
 }
 
+/* ANIMATED RAINBOW OUTLINE */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 10px;
+    padding: 4px;
+    border-radius: 20px;
 
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        lime,
+        blue,
+        violet,
+        red
+    );
+
+    background-size: 300% 300%;
+    animation: rainbow-border 20s linear infinite reverse;
+
+    pointer-events: none;
+    z-index: 9999;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* RAINBOW LINKS */
 a {
     background: linear-gradient(
         90deg,
@@ -37,23 +70,35 @@ a {
     animation: rainbow 16s linear infinite;
 }
 
+/* LINK ANIMATION */
 @keyframes rainbow {
     0% {
-        background-position: 0% center;
-    }
-    100% {
         background-position: 300% center;
     }
+    100% {
+        background-position: 0% center;
+    }
 }
 
+/* BORDER ANIMATION */
+@keyframes rainbow-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+}
 
+/* HEADER */
 header {
-  display: flex;        /* align items in a row */
-  align-items: center;  /* vertically center logo + text */
-  padding: 10px 20px;   /* space around */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
 }
 
+/* LOGO */
 .logo {
-  height: 60px;         /* adjust size as needed */
-  margin-right: 10px;   /* space between logo and text */
+    height: 60px;
+    margin-right: 10px;
 }
