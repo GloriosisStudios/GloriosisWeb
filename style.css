@@ -8,9 +8,9 @@ body {
     font-family: Helvetica, sans-serif;
 
     background: linear-gradient(
-        -45deg,
+        180deg,
         rgb(0, 0, 0),
-        rgb(17, 25, 43)
+        rgb(27, 38, 63)
     );
 
     background-attachment: fixed;
